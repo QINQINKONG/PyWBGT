@@ -1,0 +1,24 @@
+name: PyWBGT
+channels:
+  - conda-forge
+dependencies:
+  - python=3
+  - cartopy
+  - make
+  - matplotlib=3.3.0
+  - netcdf4
+  - pip
+  - xarray
+  - zarr
+  - cython
+  - numba
+  - dask
+  - regionmask
+  - pandas
+  - fsspec
+  - intake
+  - intake-esm
+  - gcsfs
+  - bsddb3
+  - cmaps
+
