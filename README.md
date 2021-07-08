@@ -10,7 +10,7 @@ Several models exist for estimating WBGT from meteorological data among which th
 ****
 ### What is in this repository?
 - ```./src/```: Cython source file for calculating WBGT and cosine zenith angle (needed for WBGT calculation)
-- ```./Jupyter_notebooks/```: A jupyter nobtebook introducing the usage of our code and several other jupyter notebooks and processed dataset that can be used to reproduce figures in "Explicit Calculations of Wet Bulb Globe Temperature compared with approximations and why it matters for labor productivity" (submitted to Geohealth) by Qinqin Kong and Matthew Huber. 
+- ```./Jupyter_notebooks/```: A jupyter nobtebook introducing the usage of our code and several other jupyter notebooks and processed dataset that can be used to reproduce figures in "*Explicit Calculations of Wet Bulb Globe Temperature compared with approximations and why it matters for labor productivity*" (submitted to Geohealth) by Qinqin Kong and Matthew Huber. 
 
 ### Future plans
 We plan to build and distribute a Python package for heat stress metrics calculation. It will not only include the WBGT code here but also code for several other heat stress metrics like thermodynamic wet bulb temperature.
@@ -18,7 +18,7 @@ We plan to build and distribute a Python package for heat stress metrics calcula
 ### How to use the Jupyte notebooks
 By launching the Binder projected created for this repository, users will be able to run the Jupyter notebooks without installing any package by thenselves. 
 If users want to run the notebooks or use our code in their personal environment, they can either place the ```.so``` shared object file under their personal directory, or compile the code using setup tools (to get the shared object file) by themselves. The following command can be used for compiling Cython source file:
-- for Intel compiler: ```LDSHARED="icc -shared" CC=icc python setupWBGT.py develop```; ``LDSHARED="icc -shared" CC=icc python setupcoszenith.py develop```
+- for Intel compiler: `LDSHARED="icc -shared" CC=icc python setupWBGT.py develop`; ``LDSHARED="icc -shared" CC=icc python setupcoszenith.py develop```
 - for gcc compiler: ```python setupWBGT.py build_ext --inplace```; ```python setupcoszenith.py build_ext --inplace```
 
 ### References
