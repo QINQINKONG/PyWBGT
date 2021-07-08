@@ -11,7 +11,8 @@ Several models exist for estimating WBGT from meteorological data among which th
 ****
 ### What is in this repository?
 - `./src/`: Cython source file for calculating WBGT and cosine zenith angle (needed for WBGT calculation)
-- `./Jupyter_notebooks/`: A jupyter nobtebook introducing the usage of our code and several other jupyter notebooks and processed dataset that can be used to reproduce figures in "*Explicit Calculations of Wet Bulb Globe Temperature compared with approximations and why it matters for labor productivity*" (submitted to Geohealth) by Qinqin Kong and Matthew Huber. 
+- `./Jupyter_notebooks/`: A jupyter nobtebook introducing the usage of our code and several other jupyter notebooks that can be used to reproduce figures in "*Explicit Calculations of Wet Bulb Globe Temperature compared with approximations and why it matters for labor productivity*" (submitted to Geohealth) by Qinqin Kong and Matthew Huber. 
+- `./nc_files/`: Processed dataset (netcdf files) that are needed for reproducing figures in "*Explicit Calculations of Wet Bulb Globe Temperature compared with approximations and why it matters for labor productivity*" (submitted to Geohealth) by Qinqin Kong and Matthew Huber. 
 
 ****
 ### Future plans
