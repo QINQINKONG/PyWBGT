@@ -10,9 +10,8 @@ Several models exist for estimating WBGT from meteorological data among which th
 
 ****
 ### What is in this repository?
-- `./src/`: Cython source file for calculating WBGT and cosine zenith angle (needed for WBGT calculation) and the compiled shared object file
-- `./Jupyter_notebooks/`: A jupyter nobtebook introducing the usage of our code
-- `./nc_files/`: This folder contains processed dataset (netcdf files) that are needed for reproducing figures in "*Explicit Calculations of Wet Bulb Globe Temperature compared with approximations and why it matters for labor productivity*". 
+- `./src/`: Cython source files (```.pyx``` file) for calculating WBGT and cosine zenith angle (needed for WBGT calculation); Cython source file needs to be compiled first generating shared object files (```.so``` file) that can be directly imported in Python. This directory already contains the compiled shared object files. Users can also compile the Cython source files in their personal environment.
+- `./Jupyter_notebooks/`: A jupyter nobtebook introducing the usage of our code.
 
 ****
 ### Future plans
@@ -28,6 +27,7 @@ If users want to run the notebooks or use our code in their personal environment
 - for gcc compiler: 
   - `python setupWBGT.py build_ext --inplace`; 
   - `python setupcoszenith.py build_ext --inplace`
+For introduction to Cython, please refer to https://cython.readthedocs.io/en/latest/
 
 ****
 ### References
