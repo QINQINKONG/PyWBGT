@@ -1,6 +1,6 @@
 # PyWBGT
 
-This repository contains Cython source code that can be used to estimate wet bulb globe temperature (WBGT) from datasets of standard meterological measurements using models developed by Liljegren et al (2008) [1].  
+This repository contains Cython source code for estimating wet bulb globe temperature (WBGT) from datasets of standard meterological measurements using models developed by Liljegren et al (2008) [1].  
 
 ****
 ### What is WBGT?
@@ -11,8 +11,8 @@ Several models exist for estimating WBGT from meteorological data among which th
 ****
 ### What is in this repository?
 - `./src/`: Cython source file for calculating WBGT and cosine zenith angle (needed for WBGT calculation)
-- `./Jupyter_notebooks/`: A jupyter nobtebook introducing the usage of our code and several other jupyter notebooks that can be used to reproduce figures in "*Explicit Calculations of Wet Bulb Globe Temperature compared with approximations and why it matters for labor productivity*" (submitted to Geohealth) by Qinqin Kong and Matthew Huber. 
-- `./nc_files/`: Right now this folder is empty for space concerns. In the near future, we will include processed dataset (netcdf files) that are needed for reproducing figures in "*Explicit Calculations of Wet Bulb Globe Temperature compared with approximations and why it matters for labor productivity*" (submitted to Geohealth) by Qinqin Kong and Matthew Huber. 
+- `./Jupyter_notebooks/`: A jupyter nobtebook introducing the usage of our code and several other jupyter notebooks that can be used to reproduce figures in "*Explicit Calculations of Wet Bulb Globe Temperature compared with approximations and why it matters for labor productivity*". 
+- `./nc_files/`: This folder contains processed dataset (netcdf files) that are needed for reproducing figures in "*Explicit Calculations of Wet Bulb Globe Temperature compared with approximations and why it matters for labor productivity*". 
 
 ****
 ### Future plans
@@ -20,10 +20,14 @@ We plan to build and distribute a Python package for heat stress metrics calcula
 
 ****
 ### How to use the Jupyte notebooks
-By launching the Binder projected created for this repository, users will be able to run the Jupyter notebooks without installing any package by thenselves. 
+By launching the Binder projects created for this repository, users will be able to run the Jupyter Notebooks without installing any package by themselves. 
 If users want to run the notebooks or use our code in their personal environment, they can either place the ```.so``` shared object file under their personal directory, or compile the code using setup tools (to get the shared object file) by themselves. The following command can be used for compiling Cython source file:
-- for Intel compiler: `LDSHARED="icc -shared" CC=icc python setupWBGT.py develop`; `LDSHARED="icc -shared" CC=icc python setupcoszenith.py develop`
-- for gcc compiler: `python setupWBGT.py build_ext --inplace`; `python setupcoszenith.py build_ext --inplace`
+- for Intel compiler: 
+  - `LDSHARED="icc -shared" CC=icc python setupWBGT.py develop`; 
+  - `LDSHARED="icc -shared" CC=icc python setupcoszenith.py develop`
+- for gcc compiler: 
+  - `python setupWBGT.py build_ext --inplace`; 
+  - `python setupcoszenith.py build_ext --inplace`
 
 ****
 ### References
