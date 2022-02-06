@@ -12,14 +12,15 @@ Several models exist for estimating WBGT from meteorological data among which th
 ### What is in this repository?
 - `./src/`: Cython source files (```.pyx``` file) for calculating WBGT and cosine zenith angle (needed for WBGT calculation); Cython source file needs to be compiled first generating shared object files (```.so``` file) that can be directly imported in Python. This directory already contains the compiled shared object files. Users can also compile the Cython source files in their personal environment.
 - `./Jupyter_notebooks/`: A jupyter nobtebook introducing the usage of our code.
+- './': a YAML file that can be used to build conda environment containing all 
 
 ****
 ### Future plans
-We plan to build and distribute a Python package for heat stress metrics calculation. It will not only include the WBGT code here but also code for several other heat stress metrics like thermodynamic wet bulb temperature.
+We plan to build and distribute a Python package for WBGT calculation.
 
 ****
 ### How to use the Jupyte notebooks
-By launching the Binder projects created for this repository, users will be able to run the Jupyter Notebooks without installing any package by themselves. 
+Before using the Jupyter notebook, users will be able to run the Jupyter Notebooks without installing any package by themselves. 
 If users want to run the notebooks or use our code in their personal environment, they can either place the ```.so``` shared object file under their personal directory, or compile the code using setup tools (to get the shared object file) by themselves. The following command can be used for compiling Cython source file:
 - for Intel compiler: 
   - `LDSHARED="icc -shared" CC=icc python setupWBGT.py develop`; 
