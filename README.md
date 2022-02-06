@@ -10,9 +10,9 @@ Several models exist for estimating WBGT from meteorological data among which th
 
 ****
 ### What is in this repository?
-- `./src/`: Cython source files (```.pyx``` file) for calculating WBGT and cosine zenith angle (needed for WBGT calculation); Cython source file needs to be compiled first generating shared object files (```.so``` file) that can be directly imported in Python. This directory already contains the compiled shared object files. Users can also compile the Cython source files in their personal environment.
+- `./src/`: Cython source files (```.pyx``` file) for calculating WBGT and cosine zenith angle (needed for WBGT calculation); Cython source file needs to be compiled first generating shared object files (```.so``` file) that can be directly imported in Python. Setup tools (```.py``` file) are recommended for build Cython source file. This directory already contains the compiled shared object files, although users can also compile themselves.
 - `./Jupyter_notebooks/`: A jupyter nobtebook introducing the usage of our code.
-- './': a YAML file that can be used to build conda environment containing all 
+- `environment.yml` a YAML file that can be used to build conda environment containing all needed python packages.
 
 ****
 ### Future plans
@@ -20,8 +20,7 @@ We plan to build and distribute a Python package for WBGT calculation.
 
 ****
 ### How to use the Jupyte notebooks
-Before using the Jupyter notebook, users will be able to run the Jupyter Notebooks without installing any package by themselves. 
-If users want to run the notebooks or use our code in their personal environment, they can either place the ```.so``` shared object file under their personal directory, or compile the code using setup tools (to get the shared object file) by themselves. The following command can be used for compiling Cython source file:
+Before using the Jupyter notebook, users need to install dependent Python packages listed in `environment.yml`. Users should be able to import our WBGT module in Python implementation if they put `.so` file under their directory. If that does not work, users can compile Cython source files themselves with the following command:
 - for Intel compiler: 
   - `LDSHARED="icc -shared" CC=icc python setupWBGT.py develop`; 
   - `LDSHARED="icc -shared" CC=icc python setupcoszenith.py develop`
@@ -32,6 +31,11 @@ If users want to run the notebooks or use our code in their personal environment
 For introduction to Cython, please refer to https://cython.readthedocs.io/en/latest/
 
 ****
+### Citation
+If you want to use our code, please consider cite `Kong, Qinqin, and Matthew Huber. “Explicit Calculations of Wet Bulb Globe Temperature Compared with Approximations and Why It Matters for Labor Productivity.” Earth’s Future, January 31, 2022. https://doi.org/10.1029/2021EF002334.`
+
+
+****
 ### References
 
 [1] Liljegren JC, Carhart RA, Lawday P, Tschopp S, Sharp R. Modeling the wet bulb globe temperature using standard meteorological measurements. J Occup Environ Hyg. 2008;5(10):645-55. 
@@ -39,8 +43,6 @@ For introduction to Cython, please refer to https://cython.readthedocs.io/en/lat
 [2] Yaglou CP, Minard D. Control of heat casualties at military training centers. AMA Arch Ind Health. 1957;16(4):302-16. 
 
 [3] Lemke B, Kjellstrom T. Calculating workplace WBGT from meteorological data: a tool for climate change assessment. Ind Health. 2012;50(4):267-78. 
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/QINQINKONG/PyWBGT/main)
 
 
 Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
