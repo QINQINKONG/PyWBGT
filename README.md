@@ -10,7 +10,7 @@ Several models exist for estimating WBGT from meteorological data among which th
 
 ****
 ### What is in this repository?
-- `./src/`: Cython source files (```.pyx``` file) for calculating WBGT and cosine zenith angle (needed for WBGT calculation); Cython source file needs to be compiled first generating shared object files (```.so``` file) that can be directly imported in Python. Setup tools (```.py``` file) are recommended for build Cython source file. This directory already contains the compiled shared object files, although users can also compile themselves.
+- `./src/`: Cython source files (```.pyx``` file) for calculating WBGT and cosine zenith angle (needed for WBGT calculation); Cython source file needs to be compiled first to generate shared object files (```.so``` file) that can be directly imported in Python. Setup tools (```.py``` file) are recommended for building Cython source file. This directory already contains the compiled shared object files, although users can also compile themselves.
 - `./Jupyter_notebooks/`: A jupyter nobtebook introducing the usage of our code.
 - `environment.yml` a YAML file that can be used to build conda environment containing all needed python packages.
 
